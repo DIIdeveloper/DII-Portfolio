@@ -8,11 +8,11 @@ import pic5 from '../pictures/pic5.jpg'
 import './slider.css'
 
 const caruselARR = [
-  { id: 0, text: "garden shop", src: pic1 },
-  { id: 1, text: "card", src: pic2 },
-  { id: 2, text: "First page", src: pic3 },
-  { id: 3, text: "Behavioral analysis", src: pic4 },
-  { id: 4, text: "system for malware", src: pic5 }];
+  { id: 0, text: "garden shop", src: pic1, link:"https://github.com/DIIdeveloper/garden-shop"},
+  { id: 1, text: "card", src: pic2, link:"https://github.com/DIIdeveloper/garden-shop" },
+  { id: 2, text: "First page", src: pic3, link:"https://github.com/DIIdeveloper/My-first-page" },
+  { id: 3, text: "Behavioral analysis", src: pic4, link:"https://github.com/DIIdeveloper/Behavioral-analysis-system-for-malware" },
+  { id: 4, text: "system for malware", src: pic5, link:"https://github.com/DIIdeveloper/Behavioral-analysis-system-for-malware" }];
 
 function Slider() {
 
@@ -71,14 +71,15 @@ function Slider() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ root: scrollRef }}
               >
+                <a href={obj.link}>
                 <motion.img className='motion-img' src={obj.src}
                   key={obj.src}
                   initial={{ scale: 1 }}
                   whileInView={{ scale: [null, 1.1, 1.2], boxShadow: "1px 23px 41px 4px rgba(0, 0, 0, 0.5)" }}
                   transition={{ duration: 0.2 }}
                   viewport={{ root: imageRef }}>
-                    
                 </motion.img>
+                </a>
 
                 <motion.p className='motion-p'
                   key={obj.text}

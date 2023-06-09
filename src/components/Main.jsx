@@ -16,9 +16,9 @@ import './Main.css'
 function Main() {
 const [WinWidth, setWinWidth] = useState (window.innerWidth);
   const MainARR = [
-    { id: 0, src: Discord, link: "a", NameId:"Discord" },
-    { id: 1, src: Github, link: "b",NameId:"Github"},
-    { id: 2, src: Telegram, link: "c", NameId:"Telegram"}];
+    { id: 0, src: Discord, link: "https://discordapp.com/users/322072035327082497", NameId:"Discord" },
+    { id: 1, src: Github, link: "https://github.com/DIIdeveloper",NameId:"Github"},
+    { id: 2, src: Telegram, link: "https://t.me/DIIdev", NameId:"Telegram"}];
 
   const mainRef = useRef();
 
@@ -53,7 +53,7 @@ const [WinWidth, setWinWidth] = useState (window.innerWidth);
             <h2>Ivan Demidov</h2>
             <h3>Frontend/Backend Developer</h3>
             <div className='main-contacts'>
-              {MainARR && MainARR.map(obj => (<a id={obj.NameId} key={obj.link}><img key={obj.id} src={obj.src}/></a>))}
+              {MainARR && MainARR.map(obj => (<a href={obj.link} id={obj.NameId} key={obj.link}><img key={obj.id} src={obj.src}/></a>))}
             </div>
             
             <motion.button className='main-button'
