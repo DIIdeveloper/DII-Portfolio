@@ -1,0 +1,316 @@
+body{
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway/Raleway-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media(max-width: 600px) {
+  #main-countainer {
+    align-items: center;
+    margin-top: 20vh;
+    display: flex;
+    
+    margin-left: 5vw;
+  }
+  #main-countainer h2{font-size: 10vw; width: 70vw; text-align: center;}
+  #main-countainer h3{font-size: 6vw; width: 90vw; text-align: center;}
+
+  .main-button #main-button-h2 {font-size: 30px; width: 100%;}
+
+
+  #main-about {align-items: center;}
+
+  #main-about h1{font-size: 20px;}
+
+  #main-about h4{font-size: 15px;}
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 99vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+.main-bg-white {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 99vh;
+  background-image: url("../pictures/BG_white.png");
+  background-repeat: no-repeat;
+
+}
+
+.main-bg-black {
+  z-index: 1;
+  left: 45vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 99vw;
+  height: 99vh;
+  background-image: url("../pictures/BG_black.png");
+  background-repeat: no-repeat;
+}
+
+
+.main-bg-white svg {
+  z-index: 1;
+  fill: white;
+  width: 1500px;
+  height: 1000px;
+  position: absolute;
+}
+
+.main-bg-black svg {
+  fill: white;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  margin-right: 15vw;
+}
+
+.main-countainer {
+  z-index: 99;
+  position: relative;
+  margin-top: 18vh;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2 {
+  font-family: "Raleway-Medium";
+  width: 410px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  width: 501px;
+  height: 42px;
+  font-family: 'Raleway-Light';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 90;
+}
+
+.main-contacts img {
+  width: 45px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.main-contacts a {
+  width: 45px;
+  height: 40px;
+  background-color: #2F2E2A;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(194, 187, 183);
+  box-shadow: 4px 3px 0px 0px rgba(34, 60, 80, 0.7);
+}
+
+
+
+#Discord:hover {
+  background-color: rgb(125, 52, 243); 
+}
+
+#Discord:active {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px;
+  left: 3px;
+  top: 3px;
+}
+
+#Github:hover {
+  background-color: rgb(56, 68, 243);
+}
+
+#Github:active {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px;
+  left: 3px;
+  top: 3px;
+}
+
+#Telegram:hover {
+  background-color: rgb(87, 161, 245);
+}
+
+#Telegram:active {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px;
+  left: 3px;
+  top: 3px;
+}
+
+
+
+.main-button {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 43px;
+  background: #2F2E2A;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+.main-button a {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+.main-button h2 {
+  margin-top: 3px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+
+.main-about {
+  position: relative;
+  z-index: 99;
+  background: #2F2E2A;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.main-about h1 {
+  font-family: 'Raleway-Light';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+  margin-left: 25px;
+}
+
+.main-about h4 {
+  font-family: 'Raleway-Light';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+  margin-left: 25px;
+}
+
+.main-skills-portfolio {
+  position: relative;
+  z-index: 2;
+  background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #DCDCDC 100%);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+  width: 70vw;
+
+}
+
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vw;
+}
+
+.skills-portfolio-p {
+  margin-top: 50px;
+  font-family: 'Raleway-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background: #2F2E2A;
+}

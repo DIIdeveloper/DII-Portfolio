@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media(max-width: 800px) {
+    #card-skills {
+        
+        width: 110px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        margin-top: 35px;
+    }
+
+    #main-skills {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #card-skills p {
+        font-family: "Montserrat-Regular";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.13538em;
+        color: #000000;
+    }
+}
+
+.main-skills {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    overflow: hidden;
+}
+
+.card-skills {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 150px;
+    margin-top: 35px;
+}
+
+.card-skils-img {
+    width: 90%;
+    height: 70%;
+}
+
+.card-skills p {
+    font-family: "Montserrat-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.13538em;
+    color: #000000;
+}

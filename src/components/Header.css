@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Raleway-Light";
+    src: url("../fonts/Raleway/Raleway-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media(max-width: 1220px) {
+    #main-Header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        height: 0px;
+        z-index: 98;
+        margin-top: -2px;
+        flex-direction: row;
+        background:transparent ;
+
+        border-radius: 100px;
+    }
+
+    #header-items{
+        margin-right: 0px;
+    }
+    .motion-svg.active{
+        margin-top: 120px;
+    }
+
+    .motion-svg{
+        z-index: 99;
+    }
+    
+}
+
+.mobile-header{
+    position: absolute;
+    background: #2F2E2A;
+    width: 100vw;
+    height: 120px; 
+    z-index: 98;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-header-right{
+    width: 50vw;
+}
+
+.mobile-header-left{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+.main-Header {
+    position: static;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    background: #2F2E2A;
+    width: 100vw;
+    height: 60px;
+    align-items: center;
+}
+
+.header-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.header-line {
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+
+a {
+    cursor: pointer;
+    font-family: 'Raleway-Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.div-null {
+    width: 5vw;
+    height: 60px;
+}
+
+.logo {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.links {
+    width: 50%;
+    justify-content: end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo svg {
+
+    margin-left: 50px;
+    fill: white;
+}
