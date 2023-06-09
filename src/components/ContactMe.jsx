@@ -10,9 +10,9 @@ import './ContactMe.css'
 function ContactMe() {
 
     const [MessageValues, setMessageValues] = useState({
-        Name: "Ivan Demidov",
-        Mail: "7idiidi@gmail.com",
-        Message: "Hello DII"
+        Name: "",
+        Mail: "",
+        Message: "",
     })
 
     const [MessageStatus, setMessageStatus] = useState({
@@ -22,32 +22,49 @@ function ContactMe() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.send('service_DII', 'template_DII', MessageValues, 'WEm8hqF96mpjyidCb')
-            .then(response => {
-                console.log('SUCCESS!', response);
-                // setMessageValues({
-                //     Name: '',
-                //     Mail: '',
-                //     Message: ''
-                // });
-                setMessageStatus({ Status: "SUCCESS", Value: "YOUR MESSAGE HAS BEEN SENT, I WILL REPLY TO YOU AS SOON AS POSSIBLE" });
-            }, error => {
-                console.log('FAILED...', error);
-                setMessageStatus({ Status: "ERROR", Value: `MESSAGE SENDING ERROR:${error}` });
-            });
+        if (MessageValues.Name === "") {
+            console.log('ERROR_Name!')
+            setMessageStatus({ Status: "ERROR", Value: `FILL ALL NECESSARY FIELDS [NAME]` });
+            return;
+        }
+        if (MessageValues.Mail === "") {
+            console.log('ERROR_Mail!')
+            setMessageStatus({ Status: "ERROR", Value: `FILL ALL NECESSARY FIELDS [MAIL]` });
+            return;
+        }
+        if (MessageValues.Message === "") {
+            console.log('ERROR_Message!')
+            setMessageStatus({ Status: "ERROR", Value: `FILL ALL NECESSARY FIELDS [MESSAGE]` });
+            return;
+        }
+        else {
+            emailjs.send('service_DII', 'template_DII', MessageValues, 'WEm8hqF96mpjyidCb')
+                .then(response => {
+                    MessageValues
+                    console.log('MessageValues!', MessageValues);
+                    console.log('SUCCESS!', response);
+                    setMessageStatus({ Status: "SUCCESS", Value: "YOUR MESSAGE HAS BEEN SENT, I WILL REPLY TO YOU AS SOON AS POSSIBLE" });
+                }, error => {
+                    console.log('FAILED...', error);
+                    setMessageStatus({ Status: "ERROR", Value: `MESSAGE SENDING ERROR:${error}` });
+                });
+        }
     }
 
 
     const handleName = () => {
-        document.getElementById("Name").value = MessageValues.Name
+        document.getElementById("Name").value = "Ivan Demidov"
+       setMessageValues({Name: document.getElementById("Name").value, Mail: MessageValues.Mail, Message: MessageValues.Message});
     }
 
     const handleMail = () => {
-        document.getElementById("Mail").value = MessageValues.Mail
+        document.getElementById("Mail").value = "7idiidi@gmail.com"
+        setMessageValues({Mail: document.getElementById("Mail").value, Name: MessageValues.Name, Message: MessageValues.Message});
     }
 
     const handleMassage = () => {
-        document.getElementById("Message").value = MessageValues.Message
+        document.getElementById("Message").value = "Hello DII"
+        setMessageValues({Message: document.getElementById("Message").value, Mail: MessageValues.Mail, Name: MessageValues.Name});
     }
 
     const handleChange = (e) => {
@@ -60,9 +77,9 @@ function ContactMe() {
     }
 
 
-    useEffect(() => {
-        console.log(MessageValues)
-    }, [MessageValues])
+    // useEffect(() => {
+    //     console.log(MessageValues)
+    // }, [MessageValues])
 
 
     const setActive = (el, active) => {
@@ -138,13 +155,13 @@ function ContactMe() {
             {/* className={MessageStatus.Status = "SUCCESS" ? "MessageStatus.succes" : "MessageStatus.error"} */}
             {MessageStatus.Status &&
                 <motion.div className={MessageStatus.Status === "SUCCESS" ? "MessageStatus-succes" : "MessageStatus-error"}
-                whileInView={{y:0, opacity:1}}
-                initial={{y:100, opacity:0}}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    initial={{ y: 100, opacity: 0 }}
                 >
                     <div className="MessageStatus-body">
                         <motion.img src={MessageStatus.Status === "SUCCESS" ? iconDone : iconClose} onClick={handleClose}
-                        whileHover={{left:"2px"}}
-                        transition={{ease: "linear", type: "spring", damping: 0.1, restSpeed:10}}
+                            whileHover={{ left: "2px" }}
+                            transition={{ ease: "linear", type: "spring", damping: 0.1, restSpeed: 10 }}
                         />
                         <div>{MessageStatus.Value}</div>
                     </div>
