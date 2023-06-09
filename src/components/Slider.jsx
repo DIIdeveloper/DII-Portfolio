@@ -42,9 +42,12 @@ function Slider() {
   function onScroll() {
     document.body.style.overflow = "visible";
   }
-
-
+// const handleLink = (e) => {
+//   console.log(e)
+//   // document.location.href = link
+// }
   const dragControls = useDragControls();
+  
 
   return (
     <>
